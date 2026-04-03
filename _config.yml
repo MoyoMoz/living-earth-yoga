@@ -1,7 +1,7 @@
 title: Living Earth Yoga
 description: "Yoga content that inspires you to go outside. Practice meets the earth."
-url: "https://livingearthyoga.com"
-baseurl: ""
+url: "https://moyomoz.github.io"
+baseurl: "/living-earth-yoga"
 author: Moyo
 
 permalink: /blog/:title/
