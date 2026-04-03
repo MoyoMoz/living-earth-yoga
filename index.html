@@ -1,0 +1,75 @@
+---
+layout: default
+title: Home
+---
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="{{ '/assets/images/cherry-blossoms.jpg' | relative_url }}" alt="Cherry blossoms in bloom">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Living Earth Yoga</h1>
+    <p class="hero-subtitle">Where practice meets the earth</p>
+    <a href="#signup" class="hero-cta">Join the Journey</a>
+  </div>
+</section>
+
+<!-- About Preview -->
+<section class="section">
+  <div class="container">
+    <div class="about-preview">
+      <div class="about-preview-image">
+        <img src="{{ '/assets/images/sunflower.jpeg' | relative_url }}" alt="Sunflower in garden">
+      </div>
+      <div class="about-preview-text">
+        <h2>Yoga rooted in nature</h2>
+        <p>Living Earth Yoga is an invitation to step outside, breathe deeply, and let the natural world be your teacher. Through cinematic instruction and gentle guidance, we explore what it means to practice with the earth beneath us.</p>
+        <p>Whether you're new to yoga or deepening a lifelong practice, there's a place for you here.</p>
+        <a href="{{ '/about' | relative_url }}" class="text-link">Read My Story</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Nature Image Grid -->
+<section class="section" style="padding-top: 0;">
+  <div class="image-grid">
+    <img src="{{ '/assets/images/dahlia.jpg' | relative_url }}" alt="Pink dahlia">
+    <img src="{{ '/assets/images/crocus.jpeg' | relative_url }}" alt="Purple crocus">
+    <img src="{{ '/assets/images/asters.jpg' | relative_url }}" alt="Purple asters">
+    <img src="{{ '/assets/images/sunflower.jpeg' | relative_url }}" alt="Sunflower">
+    <img src="{{ '/assets/images/flower-hand.jpg' | relative_url }}" alt="Holding a flower">
+    <img src="{{ '/assets/images/cherry-blossoms.jpg' | relative_url }}" alt="Cherry blossoms">
+  </div>
+</section>
+
+<!-- Email Signup -->
+<section class="signup-section" id="signup">
+  <h2>Stay connected</h2>
+  <p>Gentle updates on new classes, blog posts, and outdoor practice inspiration. No spam, ever.</p>
+  {% include email-signup.html %}
+</section>
+
+<!-- Recent Blog Posts -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>From the journal</h2>
+    </div>
+    <div class="blog-grid">
+      {% for post in site.posts limit:3 %}
+      <article class="blog-card">
+        <div class="blog-card-body">
+          <p class="blog-card-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+          <h3 class="blog-card-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

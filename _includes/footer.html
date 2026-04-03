@@ -1,0 +1,25 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="footer-wordmark">Living Earth Yoga</p>
+        <p class="footer-tagline">Where practice meets the earth.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <a href="{{ '/about' | relative_url }}">About</a>
+        <a href="{{ '/blog' | relative_url }}">Blog</a>
+        <a href="{{ '/classes' | relative_url }}">Classes</a>
+        <a href="{{ '/contact' | relative_url }}">Contact</a>
+      </div>
+      <div class="footer-signup">
+        <h4>Stay Connected</h4>
+        <p>Get gentle updates on new classes, blog posts, and outdoor practice inspiration.</p>
+        {% include email-signup.html %}
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} Living Earth Yoga. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,26 @@
+---
+layout: default
+title: Blog
+---
+
+<article class="page">
+  <div class="container">
+    <header class="page-header">
+      <h1>Journal</h1>
+      <p class="page-subtitle">Thoughts on yoga, nature, and living slowly</p>
+    </header>
+    <div class="blog-grid">
+      {% for post in site.posts %}
+      <article class="blog-card">
+        <div class="blog-card-body">
+          <p class="blog-card-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+          <h3 class="blog-card-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          <p class="blog-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</article>

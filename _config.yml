@@ -1,0 +1,26 @@
+title: Living Earth Yoga
+description: "Yoga content that inspires you to go outside. Practice meets the earth."
+url: "https://livingearthyoga.com"
+baseurl: ""
+author: Moyo
+
+permalink: /blog/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
